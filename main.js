@@ -63,6 +63,7 @@ function linearSearch(){
             let previous = counter -1;
             divs[previous].style.backgroundColor = "#F5F7F8";
         }
+        document.getElementById('operation').innerHTML ="You made this much operations: " + operation;
            clearInterval(move);
         }
         else{
@@ -75,6 +76,7 @@ function linearSearch(){
 
          counter++;
         if(counter >= divs.length){
+            document.getElementById('operation').innerHTML ="You made this much operations: " + operation;
             clearInterval(move);
         }
     },800);
@@ -87,20 +89,21 @@ function binarySearch(){
    let move = setInterval(() => {
         operation++;
         if(low>=high){
+            document.getElementById('operation').innerHTML ="You made this much operations: " + operation;
             clearInterval(move);
         }
 
         let mid = Math.floor((high+low)/2);
-
+        divs[mid].style.backgroundColor = "blue";
         if(target == numsArray[mid]){
             divs[mid].style.backgroundColor = "green";
+            document.getElementById('operation').innerHTML ="You made this much operations: " + operation;
             clearInterval(move);
         }
 
         else if(target > numsArray[mid]){
             for(let i = low;i<=mid;i++){
                 divs[i].style.backgroundColor = "red";
-                
             }
          low = mid +1;
          for(let i = low;i<=high;i++){
