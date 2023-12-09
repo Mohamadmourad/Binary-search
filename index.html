@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/55a4ab9ea3.js" crossorigin="anonymous"></script>
+    <title>Searching alorithm</title>
+</head>
+<body>
+    <div class="settingsPlace"><i class="fa-solid fa-gear" id="settingIcon"></i></div>
+    <header>
+        <form>
+            <label>
+                <input class="sorting" type="radio" name="options" value="linear" id="linear" checked> Linear Search
+            </label>
+            <label>
+                <input class="sorting" type="radio" name="options" value="binary" id="binary"> Binary Search
+            </label>
+        </form>
+    </header>
+    <main>
+
+
+        <div class="table" id="table">
+        <div class="divs"></div>
+        <div class="divs"></div>
+        <div class="divs"></div>
+        <div class="divs"></div>
+        <div class="divs"></div>
+        <div class="divs"></div>
+        <div class="divs"></div>
+        <div class="divs"></div>
+        <div class="divs"></div>
+        <div class="divs"></div>
+        <div class="divs"></div>
+    </div>
+    </main>
+    <div class="input">
+        <p>Enter the number you want to search</p>
+        <input type="text" placeholder="0" id="target">
+        <button id="start">Start</button>
+    </div>
+    <div class="settings" id="settings">
+        <i class="fa-solid fa-x" id="exit"></i>
+        <p>Enter the length of the array: </p>
+        <input type="text" placeholder="size" id="arraySize">
+        <form>
+            <label>
+                <input class ="type" type="radio" name="option" value="sorted" id="sorted" checked> Sorted
+            </label>
+            <label>
+                <input class ="type" type="radio" name="option" value="random" id="random"> Random
+            </label>
+        </form>
+        <button id="applySettings">Enter</button>
+    </div>
+    <script src="main.js"></script>
+    <script src="settings.js"></script>
+</body>
+</html>
